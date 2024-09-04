@@ -1,0 +1,30 @@
+/* Custom styles for the form */
+.container {
+    max-width: 100%;
+  }
+  
+  .b-card {
+    border-radius: 0.5rem;
+  }
+  
+  .b-form-input {
+    border-radius: 0.25rem;
+  }
+  
+  .b-button {
+    border-radius: 0.25rem;
+  }
+  
+  .b-form-group .form-label {
+    font-weight: 600;
+  }
+  
+  .b-card-header {
+    font-size: 1.25rem;
+  }
+  
+  @media (max-width: 576px) {
+    .b-card {
+      padding: 1rem;
+    }
+  }
