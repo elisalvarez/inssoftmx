@@ -115,9 +115,22 @@
             const errorApi = await response.json();
             error.value = true;
             success.value = false;
-            errormessage.value = errorApi.message || `¡Error HTTP! Estado: ${response.status}`;
+            
+            let message = '';
+            message = errorApi.message.join(' ').replace(/\n/g, '');
+    
+            errormessage.value = message || `¡Error HTTP! Estado: ${response.status}`;
+
+
           } else { 
             success.value = true;
+            errormessage.value = '';
+            error.value = false;
+            form.value.email = '';
+            form.value.name = '';
+            form.value.password = '';
+            form.value.phoneNumber = '';
+
           }
         } catch (err) {
           console.error('Error al enviar el registro:', err);

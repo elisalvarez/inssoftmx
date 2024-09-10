@@ -22,12 +22,7 @@ export class CreateUserDto {
   
     @IsNotEmpty()
     @Matches(passwordRegEx, {
-    message: `La contraseña debe cumplir con los siguientes requisitos:
-    - Tener entre 8 y 20 caracteres.
-    - Incluir al menos una letra mayúscula.
-    - Incluir al menos una letra minúscula.
-    - Incluir al menos un número.
-    - Incluir al menos un carácter especial.`,
+    message: 'La contraseña debe cumplir con los siguientes requisitos: Tener entre 8 y 20 caracteres, incluir al menos una letra mayúscula, incluir al menos una letra minúscula, incluir al menos un número, incluir al menos un carácter especial.',
     })
     password: string;
 
